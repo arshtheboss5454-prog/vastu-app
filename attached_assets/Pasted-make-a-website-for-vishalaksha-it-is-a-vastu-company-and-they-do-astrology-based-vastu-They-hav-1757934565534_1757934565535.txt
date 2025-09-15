@@ -1,0 +1,35 @@
+make a website for "vishalaksha®", it is a vastu company and they do astrology based vastu. They have been mentored by Mahavastu's Khushdeep Bansal and they are a mashavastu certified aacharya. They provide vastu services in fields- 1. residential vastu, 2. Commercial vastu, 3. Industrial vastu.(make different pages explaining each).
+also make an about us page telling about the head of vishalaksha- Shri Vishal Singla, write content about his background(use pseudo content we'll change it later).
+There should be another pahe called Yogdaan, where they will have a form asking for name, mobile no., dob, place of birth, upload file option asking for kundli map and one more upload option to ask for kundli scheme, and after that there will be an option to enter "what do you want to ask us?" (limit to 200 words) . save this submission in firebase and when we will show this in admin for each diffewrent event of yopgdaan there should option in the admin portal to sort according to first 50 or 51 or 100 maybe any number so we will build accordingly. a person has to fill this form. SO yogdaan for context is a free service that is done by them to get free consultation and the slot is dependent upon different occasions of this event, maybe some time they only select 100, or maybe something else, for every date of this yogdaan we will schedule this event on the website and everything will be displayed accordingly. We will accomplish this by using admin.abcd.in, where the admin can login and schedule events and changhe the name of the people who will be counselling in the yogdaan, this hsould check date and time from the database accordingly and reflect the new date and everything for the yogdaan. use firebase as backend so we will have no hosting cost as well. just give me the landing page with firebase integration right now and tell me where to put these creds. after the landing page we will move on to build the admin website differently.
+Okay so now another page will be book a consultation, where a person will fill basic details as-
+1. name
+2. mobile
+3. address
+4. issue( 8 default options and one other option, where you can wriute a custom query)
+5.email address
+
+now the cost for this will also be set by the admi portal for per query, set the default to be 11000 per hour but this if changed from admin portal will change. Now after clicking this we will give an option to pay through razorpay, and after successful payment this should be stored in the firebase and reflected in the admin portal that this person has successfully booked the appointment.
+
+now we will make one more page to show "Our Process", check out Vastu plan from mahavastu for reference and enter.
+
+all of these pages should be in the navlinks as well.
+
+make it super responsive.
+
+
+
+now let's talk about style, use this chakra atttached in the hero banner.
+
+make our website sound authentic and real. about us page will carry many photos of Shri Vishal Singla, use placeholders right now.
+
+make similar UI as attached.
+
+and use crazy crzy UX, great epic transition effects and everything do it.
+
+
+make a vite react js project, no next js, no tsx, plain vite react jsx
+
+
+give me code just now for landing page, with firebase integration after that we will build our admin portal.
+
+Thanks
