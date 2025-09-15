@@ -65,13 +65,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left px-4 lg:px-0"
           >
             <motion.div variants={itemVariants} className="mb-6">
               <span className="inline-block px-4 py-2 rounded-full bg-golden-aura/20 text-golden-aura text-sm font-medium backdrop-blur-sm">
@@ -81,7 +81,7 @@ const HeroSection = () => {
 
             <motion.h1 
               variants={itemVariants}
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight"
             >
               Transform Your Life with{' '}
               <span className="text-golden-aura">Ancient Wisdom</span>
@@ -89,7 +89,7 @@ const HeroSection = () => {
 
             <motion.p 
               variants={itemVariants}
-              className="text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl"
+              className="text-lg lg:text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               Experience the profound harmony of astrology-based vastu consultations. 
               Guided by Mahavastu's principles and blessed by cosmic energies.
@@ -118,7 +118,7 @@ const HeroSection = () => {
 
             <motion.div 
               variants={itemVariants}
-              className="mt-12 grid grid-cols-3 gap-8 text-center lg:text-left"
+              className="mt-8 lg:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8 text-center lg:text-left"
             >
               <div>
                 <div className="text-2xl font-bold text-golden-aura">1000+</div>
@@ -148,14 +148,25 @@ const HeroSection = () => {
                 transition={{ duration: 200, repeat: Infinity, ease: 'linear' }}
                 className="absolute inset-0 bg-gradient-to-r from-golden-aura/20 to-sacred-orange/20 rounded-full blur-3xl"
               />
-              <motion.img
-                src={chakraImage}
-                alt="Mahavastu Chakra"
-                className="relative z-10 w-full max-w-md lg:max-w-lg h-auto rounded-full shadow-2xl"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-                data-testid="img-chakra"
-              />
+              <div className="relative">
+                <motion.img
+                  src={chakraImage}
+                  alt="Mahavastu Chakra"
+                  className="relative z-10 w-full max-w-md lg:max-w-lg h-auto rounded-full shadow-2xl"
+                  whileHover={{ scale: 1.05, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                  data-testid="img-chakra"
+                />
+                {/* Copyright text overlay */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={inView ? { opacity: 1 } : {}}
+                  transition={{ delay: 1, duration: 0.8 }}
+                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full"
+                >
+                  <span className="text-white text-xs font-medium">Mahavastu Chakra</span>
+                </motion.div>
+              </div>
               <motion.div
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
